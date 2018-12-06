@@ -43,3 +43,9 @@ static linknd_t *list; //linked list ½ÇÃ¼
 		 ndPtr->next=newPtr;
 	 }	 	
  }
+ 
+ void genList(void){
+ 	
+ 	list = create_node(0);
+ 	return;
+}
