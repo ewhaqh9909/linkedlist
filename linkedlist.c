@@ -21,7 +21,7 @@ static linknd_t *list; //linked list 실체
  		return NULL;
 	 }
  	ndPtr->data=value;
- 	ndPtr->next-NULL;
+ 	ndPtr->next=NULL;
 	 
 	 return ndPtr; 
  }
@@ -36,9 +36,11 @@ static linknd_t *list; //linked list 실체
 	 }else
 	 {
 	 	ndPtr=list;
-	 	while(ndPtr->next!=NULL){
+	 	while(ndPtr->next != NULL)
+		 {
 	 		ndPtr=ndPtr->next;
 		 }
+		
 		 newPtr = create_node(value);
 		 ndPtr->next=newPtr;
 	 }	 	
@@ -48,4 +50,16 @@ static linknd_t *list; //linked list 실체
  	
  	list = create_node(0);
  	return;
+}
+
+void print_list(void){
+	linknd_t *ndPtr =list;
+
+	ndPtr = list->next;
+	while(ndPtr != NULL)
+	{
+		printf("%i\n",ndPtr->data);
+		ndPtr = ndPtr->next;
+		
+	}
 }
