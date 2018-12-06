@@ -12,7 +12,7 @@ int main(int argc, char *argv[]) {
 	addTail(30);
 	addTail(40);
 	
-	print_list();
+	printf_node(3);
 	
 	return 0;
 }
